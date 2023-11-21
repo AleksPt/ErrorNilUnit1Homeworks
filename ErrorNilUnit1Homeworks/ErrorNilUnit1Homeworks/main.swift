@@ -89,3 +89,16 @@ case false:
 
 // через тернарный оператор:
 isAdult && ticketStatus ? print("Добро пожаловать") : print("Доступ запрещен")
+
+// MARK: - Task 4
+
+let firstName = "Anton"
+let lastName = "Chekhov"
+let patronymic = "Pavlovich"
+
+// через конкатенацию:
+let fullName = firstName + " " + patronymic + " " + lastName
+print(fullName)
+
+// через интерполяцию:
+print("\(firstName) \(patronymic) \(lastName)")
