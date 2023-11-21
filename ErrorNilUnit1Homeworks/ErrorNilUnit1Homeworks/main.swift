@@ -155,3 +155,19 @@ case false:
 
 // вариант 3
 age >= 18 ? print("Совершеннолетний") : print("Не совершеннолетний")
+
+// MARK: - Task 8
+
+for item in 1...10 {
+    print(item)
+}
+
+// возведение в квадрат - вариант 1
+for item in 1...10 {
+    print("Квадрат числа \(item) = \(item * item)")
+}
+
+// возведение в квадрат - вариант 2
+for item in 1...10 {
+    print(pow(Decimal(item), 2))
+}
