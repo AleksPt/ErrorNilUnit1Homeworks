@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - Task 1
+// MARK: - Task 1. Проверка булевых условий
 
 let bool1 = true
 let bool2 = false
@@ -45,7 +45,7 @@ case false:
     print("Оба условия ложны")
 }
 
-// MARK: - Task 2
+// MARK: - Task 2. Проверка четности числа
 
 let num = 3
 
@@ -67,7 +67,7 @@ case false:
 // через тернарный оператор:
 num.isMultiple(of: 2) ? print("Число четное") : print("Число нечетное")
 
-// MARK: - Task 3
+// MARK: - Task 3. Доступ на мероприятие
 
 let isAdult = true
 let ticketStatus = false
@@ -90,7 +90,7 @@ case false:
 // через тернарный оператор:
 isAdult && ticketStatus ? print("Добро пожаловать") : print("Доступ запрещен")
 
-// MARK: - Task 4
+// MARK: - Task 4. Работа со строками
 
 let firstName = "Anton"
 let lastName = "Chekhov"
@@ -103,7 +103,7 @@ print(fullName)
 // через интерполяцию:
 print("\(firstName) \(patronymic) \(lastName)")
 
-// MARK: - Task 5
+// MARK: - Task 5. Операции с числами
 
 let num1: Double = 4
 let num2: Double = 6
@@ -120,7 +120,7 @@ print(multiplication)
 let division = num1 / num2
 print(num2 != 0 ? division : "На 0 делить нельзя!")
 
-// MARK: - Task 6
+// MARK: - Task 6. Точность чисел с плавающей запятой
 
 let numDouble: Double
 let numFloat: Float
@@ -134,18 +134,18 @@ print("""
 Это Float -> \(numFloat)
 """)
 
-// MARK: - Task 7
+// MARK: - Task 7. Условные операторы и возраст
 
 let age = 21
 
-// вариант 1
+// вариант 1:
 if age >= 18 {
     print("Совершеннолетний")
 } else {
     print("Не совершеннолетний")
 }
 
-// вариант 2
+// вариант 2:
 switch age >= 18  {
 case true:
     print("Совершеннолетний")
@@ -153,21 +153,44 @@ case false:
     print("Не совершеннолетний")
 }
 
-// вариант 3
+// вариант 3:
 age >= 18 ? print("Совершеннолетний") : print("Не совершеннолетний")
 
-// MARK: - Task 8
+// MARK: - Task 8. Работа с циклами
 
 for item in 1...10 {
     print(item)
 }
 
-// возведение в квадрат - вариант 1
+// возведение в квадрат - вариант 1:
 for item in 1...10 {
     print("Квадрат числа \(item) = \(item * item)")
 }
 
-// возведение в квадрат - вариант 2
+// возведение в квадрат - вариант 2:
 for item in 1...10 {
     print(pow(Decimal(item), 2))
+}
+
+// MARK: - Task 9. Логическое "И" (&&)
+
+let value1 = true
+let value2 = false
+
+// вариант 1:
+if value1 && value2 {
+    print("Оба условия выполняются")
+} else {
+    print("Не все условия выполняются")
+}
+
+// вариант 2:
+value1 && value2 ? print("Оба условия выполняются") : print("Не все условия выполняются")
+
+// вариант 3:
+switch value1 && value2 {
+case true:
+    print("Оба условия выполняются")
+case false:
+    print("Не все условия выполняются")
 }
