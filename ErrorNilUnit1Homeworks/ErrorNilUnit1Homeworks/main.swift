@@ -69,18 +69,18 @@ num.isMultiple(of: 2) ? print("Число четное") : print("Число н�
 
 // MARK: - Task 3. Доступ на мероприятие
 
-let isAdult = true
+let adult = true
 let ticketStatus = false
 
 // через инструкцию if:
-if isAdult && ticketStatus {
+if adult && ticketStatus {
     print("Добро пожаловать!")
 } else {
     print("Доступ запрещен")
 }
 
 // через инструкцию switch:
-switch isAdult && ticketStatus {
+switch adult && ticketStatus {
 case true:
     print("Добро пожаловать")
 case false:
@@ -88,7 +88,7 @@ case false:
 }
 
 // через тернарный оператор:
-isAdult && ticketStatus ? print("Добро пожаловать") : print("Доступ запрещен")
+adult && ticketStatus ? print("Добро пожаловать") : print("Доступ запрещен")
 
 // MARK: - Task 4. Работа со строками
 
@@ -239,3 +239,22 @@ case false:
 
 // через тернарный оператор:
 !number.isMultiple(of: 2) ? print("Число нечетное") : print("Число четное")
+
+// MARK: - Task 12. Комбинация операторов
+
+let isAdult = false
+let hasTicket = true
+
+if isAdult || hasTicket {
+    if isAdult && hasTicket {
+        print("Добро пожаловать!")
+    } else {
+        if isAdult {
+            print("Доступ запрещен. Нет билета")
+        } else {
+            print("Доступ запрещен. Несовершеннолетний")
+        }
+    }
+} else {
+    print("Доступ запрещен")
+}
