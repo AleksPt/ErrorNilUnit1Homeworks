@@ -102,3 +102,20 @@ print(fullName)
 
 // через интерполяцию:
 print("\(firstName) \(patronymic) \(lastName)")
+
+// MARK: - Task 5
+
+let num1: Double = 4
+let num2: Double = 6
+
+let addition = num1 + num2
+print(addition)
+
+let subtraction = num1 - num2
+print(subtraction)
+
+let multiplication = num1 * num2
+print(multiplication)
+
+let division = num1 / num2
+print(num2 != 0 ? division : "На 0 делить нельзя!")
