@@ -133,3 +133,25 @@ print("""
 Это Double -> \(numDouble)
 Это Float -> \(numFloat)
 """)
+
+// MARK: - Task 7
+
+let age = 21
+
+// вариант 1
+if age >= 18 {
+    print("Совершеннолетний")
+} else {
+    print("Не совершеннолетний")
+}
+
+// вариант 2
+switch age >= 18  {
+case true:
+    print("Совершеннолетний")
+case false:
+    print("Не совершеннолетний")
+}
+
+// вариант 3
+age >= 18 ? print("Совершеннолетний") : print("Не совершеннолетний")
