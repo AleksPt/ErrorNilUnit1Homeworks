@@ -44,3 +44,25 @@ case true:
 case false:
     print("Оба условия ложны")
 }
+
+// MARK: - Task 2
+
+let num = 3
+
+// через инструкцию if:
+if num % 2 == 0 {
+    print("Число четное")
+} else {
+    print("Число нечетное")
+}
+
+// через инструкцию switch:
+switch num % 2 == 0 {
+case true:
+    print("Число четное")
+case false:
+    print("Число нечетное")
+}
+
+// через тернарный оператор:
+num.isMultiple(of: 2) ? print("Число четное") : print("Число нечетное")
