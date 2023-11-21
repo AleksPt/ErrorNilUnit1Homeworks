@@ -119,3 +119,17 @@ print(multiplication)
 
 let division = num1 / num2
 print(num2 != 0 ? division : "На 0 делить нельзя!")
+
+// MARK: - Task 6
+
+let numDouble: Double
+let numFloat: Float
+
+numDouble = 33 - 0.000001
+numFloat = 33 - 0.000001
+
+print("""
+33 - 0.000001:
+Это Double -> \(numDouble)
+Это Float -> \(numFloat)
+""")
