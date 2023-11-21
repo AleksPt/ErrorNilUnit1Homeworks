@@ -194,3 +194,26 @@ case true:
 case false:
     print("Не все условия выполняются")
 }
+
+// MARK: - Task 10. Логическое "ИЛИ" (||)
+
+let value3 = true
+let value4 = false
+
+// вариант 1:
+if value1 || value2 {
+    print("Хотя бы одно из условий выполняется")
+} else {
+    print("Оба условия ложны")
+}
+
+// вариант 2:
+value1 || value2 ? print("Хотя бы одно из условий выполняется") : print("Оба условия ложны")
+
+// вариант 3:
+switch value1 || value2 {
+case true:
+    print("Хотя бы одно из условий выполняется")
+case false:
+    print("Оба условия ложны")
+}
