@@ -66,3 +66,26 @@ case false:
 
 // через тернарный оператор:
 num.isMultiple(of: 2) ? print("Число четное") : print("Число нечетное")
+
+// MARK: - Task 3
+
+let isAdult = true
+let ticketStatus = false
+
+// через инструкцию if:
+if isAdult && ticketStatus {
+    print("Добро пожаловать!")
+} else {
+    print("Доступ запрещен")
+}
+
+// через инструкцию switch:
+switch isAdult && ticketStatus {
+case true:
+    print("Добро пожаловать")
+case false:
+    print("Доступ запрещен")
+}
+
+// через тернарный оператор:
+isAdult && ticketStatus ? print("Добро пожаловать") : print("Доступ запрещен")
