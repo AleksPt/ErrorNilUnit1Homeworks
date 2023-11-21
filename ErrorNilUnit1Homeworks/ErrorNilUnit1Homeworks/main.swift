@@ -217,3 +217,25 @@ case true:
 case false:
     print("Оба условия ложны")
 }
+
+// MARK: - Task 11. Логическое отрицание (!)
+
+let number = 5
+
+// через инструкцию if:
+if number % 2 != 0 {
+    print("Число нечетное")
+} else {
+    print("Число четное")
+}
+
+// через инструкцию switch:
+switch number % 2 != 0 {
+case true:
+    print("Число нечетное")
+case false:
+    print("Число четное")
+}
+
+// через тернарный оператор:
+!number.isMultiple(of: 2) ? print("Число нечетное") : print("Число четное")
