@@ -103,3 +103,28 @@ func factorialAlso(_ n: Int) -> Int {
 }
 
 print(factorialAlso(5))
+
+// MARK: - Task 6. Простой калькулятор
+
+enum MathOperations {
+    case add, subtract, division, multiply
+}
+
+func calculate(num1: Int, num2: Int, operation: MathOperations) -> Int {
+    var result = Int()
+
+    switch operation {
+    case .add:
+        result = num1 + num2
+    case .subtract:
+        result = num1 - num2
+    case .division:
+        result = num1 / num2
+    case .multiply:
+        result = num1 * num2
+    }
+    
+    return result
+}
+
+print(calculate(num1: 2, num2: 5, operation: .add))
