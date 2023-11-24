@@ -136,3 +136,21 @@ func lengthString(_ str: String) -> Int {
 }
 
 print(lengthString("test"))
+
+// MARK: - Task 8. Максимум из трех чисел
+
+func maxOfThreeNumbers(num1: Int, num2: Int, num3: Int) -> Int {
+    var max = num1
+    
+    if num2 > max {
+        max = num2
+    }
+    
+    if num3 > max {
+        max = num3
+    }
+    
+    return max
+}
+
+print(maxOfThreeNumbers(num1: -100, num2: 323, num3: 7))
