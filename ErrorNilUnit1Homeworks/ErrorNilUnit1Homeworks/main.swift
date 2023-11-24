@@ -46,7 +46,7 @@ print(divisionByThree2(12))
 var array100numbers = Array(1...100)
 
 for (index, value) in array100numbers.enumerated().reversed() {
-    if value % 2 == 0 || value % 3 == 0 {
+    if numberEvenOrOdd2(value) || divisionByThree(value) {
         array100numbers.remove(at: index)
     }
 }
@@ -106,28 +106,26 @@ print(factorialAlso(5))
 
 // MARK: - Task 6. Простой калькулятор
 
-enum MathOperations {
-    case add, subtract, division, multiply
-}
-
-func calculate(num1: Int, num2: Int, operation: MathOperations) -> Int {
+func calculate(num1: Int, num2: Int, operation: String) -> Int {
     var result = Int()
 
     switch operation {
-    case .add:
+    case "+":
         result = num1 + num2
-    case .subtract:
+    case "-":
         result = num1 - num2
-    case .division:
+    case "/":
         result = num1 / num2
-    case .multiply:
+    case "*":
         result = num1 * num2
+    default:
+        break
     }
     
     return result
 }
 
-print(calculate(num1: 2, num2: 5, operation: .add))
+print(calculate(num1: 2, num2: 5, operation: "+"))
 
 // MARK: - Task 7. Длина строки
 
