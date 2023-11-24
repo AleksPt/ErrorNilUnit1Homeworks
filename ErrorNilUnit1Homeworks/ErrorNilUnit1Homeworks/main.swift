@@ -128,3 +128,11 @@ func calculate(num1: Int, num2: Int, operation: MathOperations) -> Int {
 }
 
 print(calculate(num1: 2, num2: 5, operation: .add))
+
+// MARK: - Task 7. Длина строки
+
+func lengthString(_ str: String) -> Int {
+    str.count
+}
+
+print(lengthString("test"))
