@@ -153,4 +153,12 @@ func maxOfThreeNumbers(num1: Int, num2: Int, num3: Int) -> Int {
     return max
 }
 
-print(maxOfThreeNumbers(num1: -100, num2: 323, num3: 7))
+print(maxOfThreeNumbers(num1: -100, num2: 444, num3: 7))
+
+// MARK: - Task 9. Реверс строки
+
+func reversString(_ str: String) -> String {
+    String(str.reversed())
+}
+
+print(reversString("swift"))
