@@ -39,3 +39,19 @@ func divisionByThree2(_ num: Int) -> Bool {
 }
 
 print(divisionByThree2(12))
+
+// MARK: - Task 3. Массив из 100 чисел
+
+// вариант 1:
+var array100numbers = Array(1...100)
+
+for (index, value) in array100numbers.enumerated().reversed() {
+    if value % 2 == 0 || value % 3 == 0 {
+        array100numbers.remove(at: index)
+    }
+}
+
+// вариант 2:
+let array100numbers2 = Array(1...100)
+
+let resultArray100numbers2 = array100numbers2.filter { !$0.isMultiple(of: 2) && !$0.isMultiple(of: 3) }
