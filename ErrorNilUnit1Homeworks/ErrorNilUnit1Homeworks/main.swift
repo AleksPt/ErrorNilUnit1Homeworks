@@ -81,3 +81,25 @@ func uppendFibonacci() {
 uppendFibonacci()
 print(arrayFibonacci)
 print(arrayFibonacci.count)
+
+// MARK: - Task 5. Факториал числа
+
+// вариант 1:
+func factorial(_ n: Int) -> Int {
+    var factorial = 1
+    
+    for i in 1...n {
+        factorial *= i
+    }
+    
+    return factorial
+}
+
+print(factorial(5))
+
+// вариант 2:
+func factorialAlso(_ n: Int) -> Int {
+    Int((1...n).map(Double.init).reduce(1.0, *))
+}
+
+print(factorialAlso(5))
