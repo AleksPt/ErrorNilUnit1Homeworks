@@ -55,3 +55,29 @@ for (index, value) in array100numbers.enumerated().reversed() {
 let array100numbers2 = Array(1...100)
 
 let resultArray100numbers2 = array100numbers2.filter { !$0.isMultiple(of: 2) && !$0.isMultiple(of: 3) }
+
+// MARK: - Task 4. Числа Фибоначчи
+
+var arrayFibonacci = [Int]()
+
+func uppendFibonacci() {
+    
+    func fibonacci(_ n: Int) -> Int {
+        if n == 0 {
+            return 0
+        } else if n == 1 {
+            return 1
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2)
+        }
+    }
+    
+    for _ in 1...50 {
+        let randomNumber = Int.random(in: 1...10)
+        arrayFibonacci.append(fibonacci(randomNumber))
+    }
+}
+
+uppendFibonacci()
+print(arrayFibonacci)
+print(arrayFibonacci.count)
