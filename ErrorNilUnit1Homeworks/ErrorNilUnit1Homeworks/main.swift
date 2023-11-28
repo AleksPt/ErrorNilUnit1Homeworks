@@ -366,3 +366,16 @@ func delayPrint(string str: String, seconds time: UInt32) {
 }
 
 delayPrint(string: "test1 test2 test3", seconds: 2)
+
+// MARK: - Task 22. Конвертация времени из секунд в часы, минуты и секунды
+
+func convertTime(seconds t: Int) {
+    let seconds = t % 60
+    let minutes = t / 60 % 60
+    let hours = t / 3600
+    
+    print("\(hours) часов, \(minutes) минут, \(seconds) секунда")
+    
+}
+
+convertTime(seconds: 19711)
