@@ -184,3 +184,22 @@ func countVowels(_ str: String) -> Int {
 
 let resultTask11 = countVowels("алла")
 print(resultTask11)
+
+// MARK: - Task 12. Удаление дубликатов из массива
+
+let arrayDuplicatesNumbers = [1, 1, 2, 2, 3, 3]
+
+func removeDuplicatesFromArray(array: [Int]) -> [Int] {
+    var result = [Int]()
+    
+    for i in array {
+        if !result.contains(i) {
+            result.append(i)
+        }
+    }
+    
+    return result
+}
+
+let resultTask12 = removeDuplicatesFromArray(array: arrayDuplicatesNumbers)
+print(resultTask12)
