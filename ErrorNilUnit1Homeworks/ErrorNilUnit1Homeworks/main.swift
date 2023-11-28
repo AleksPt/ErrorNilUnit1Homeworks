@@ -101,3 +101,21 @@ func transposition(array: [Int]) -> [Int] {
 
 let resultTask6 = transposition(array: array)
 print(resultTask6)
+
+// MARK: - Task 7. Форматирование строки
+
+func formattingString(_ str: String) -> String {
+    var result = [String]()
+    
+    for i in str.split(separator: " ") {
+        result.append(String(i.capitalized))
+    }
+    
+    return result.joined(separator: " ")
+    
+//     вариант 2:
+//     str.split(separator: " ").map { $0.capitalized }.joined(separator: " ")
+}
+
+let resultTask7 = formattingString("съешь еще этих мягких французских булок да выпей чаю")
+print(resultTask7)
