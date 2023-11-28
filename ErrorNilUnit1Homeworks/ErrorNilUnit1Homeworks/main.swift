@@ -165,3 +165,22 @@ func mergeArray(array1: [Int], array2: [Int]) -> [Int] {
 
 let resultTask10 = mergeArray(array1: array1, array2: array2)
 print(resultTask10)
+
+// MARK: - Task 11. Подсчет гласных
+
+func countVowels(_ str: String) -> Int {
+    var result = Int()
+    
+    let vowels: [Character] = ["а", "у", "о", "ы", "и", "э", "я", "ю", "ё", "е"]
+    
+    for i in str {
+        if vowels.contains(i) {
+            result += 1
+        }
+    }
+    
+    return result
+}
+
+let resultTask11 = countVowels("алла")
+print(resultTask11)
