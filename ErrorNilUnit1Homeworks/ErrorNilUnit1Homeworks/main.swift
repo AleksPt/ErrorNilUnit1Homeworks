@@ -119,3 +119,28 @@ func formattingString(_ str: String) -> String {
 
 let resultTask7 = formattingString("съешь еще этих мягких французских булок да выпей чаю")
 print(resultTask7)
+
+// MARK: - Task 8. Конвертация дня недели
+
+func convertDayOfWeek(day: String) -> Int {
+    switch day {
+    case "понедельник":
+        return 1
+    case "вторник":
+        return 2
+    case "среда":
+        return 3
+    case "четверг":
+        return 4
+    case "пятница":
+        return 5
+    case "суббота":
+        return 6
+    case "воскресенье":
+        return 7
+    default: return 0
+    }
+}
+
+let resultTask8 = convertDayOfWeek(day: "суббота")
+print(resultTask8)
