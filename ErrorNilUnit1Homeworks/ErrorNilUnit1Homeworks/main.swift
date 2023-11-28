@@ -274,3 +274,36 @@ func numberOfWords(string str: String, number num: Int) -> Int {
 
 let resultTask17 = numberOfWords(string: "Количество слов слов слов заданной длины", number: 4)
 print(resultTask17)
+
+// MARK: - Task 18. Угадай число
+
+var randomNumber = Int.random(in: 1...100)
+
+func guessNumber(_ randomNumber: inout Int ) {
+    
+    print("Я загадал цифру от 1 до 100. Введите число, чтобы начать игру:\r")
+    
+    var count = 0
+    
+    game()
+    
+    func game(){
+        
+        let n = String(randomNumber)
+        let userAnswer = readLine()
+        count += 1
+        
+        guard let userAnswer else { return }
+        if userAnswer == n {
+            print("Победа! Количество попыток: \(count)")
+        } else if userAnswer < n {
+            print("Загаданное число больше")
+            game()
+        } else if userAnswer > n {
+            print("Загаданное число меньше")
+            game()
+        }
+    }
+}
+
+guessNumber(&randomNumber)
