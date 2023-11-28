@@ -343,3 +343,14 @@ func decode(_ text: String) -> String {
 }
 
 print(encode("zyx"))
+
+// MARK: - Task 20. Функция вывода каждого слова строки на новой строке
+
+func eachWordOnNewLine(_ str: String) {
+    let words = str.split(separator: " ")
+    for i in words {
+        print(i)
+    }
+}
+
+eachWordOnNewLine("каждое слово на новой строке")
