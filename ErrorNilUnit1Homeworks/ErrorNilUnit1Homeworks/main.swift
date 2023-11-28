@@ -203,3 +203,18 @@ func removeDuplicatesFromArray(array: [Int]) -> [Int] {
 
 let resultTask12 = removeDuplicatesFromArray(array: arrayDuplicatesNumbers)
 print(resultTask12)
+
+// MARK: - Task 13. Сумма всех чисел до N
+
+func sumOfAllNumbers(number n: Int) -> Int {
+    var result = Int()
+    
+    for i in 1...n {
+        result += i
+    }
+    
+    return result
+}
+
+let resultTask13 = sumOfAllNumbers(number: 3)
+print(resultTask13)
