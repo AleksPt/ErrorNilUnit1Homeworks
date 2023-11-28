@@ -63,3 +63,24 @@ func convertTemperature(celsius: Float) -> Float {
 
 let resultTask4 = convertTemperature(celsius: 36.6)
 print(resultTask4)
+
+// MARK: - Task 5. Записная книжка
+
+let notebook = [
+    "Alex, 79089519039, alex@yahoo.com",
+    "Bob, 79645342323, bob@gmail.com",
+    "Kristina, 79119410991, kris@outlook.com",
+    "Kate, 79909225050, kate@mail.com"
+]
+
+func search(name: String, in arr: [String]) -> String {
+    for (index, value) in arr.enumerated() {
+        if value.hasPrefix(name) {
+            return arr[index]
+        }
+    }
+    return ""
+}
+
+let resultTask5 = search(name: "Bob", in: notebook)
+print(resultTask5)
