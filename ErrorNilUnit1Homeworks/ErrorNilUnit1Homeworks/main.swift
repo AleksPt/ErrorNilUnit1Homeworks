@@ -354,3 +354,15 @@ func eachWordOnNewLine(_ str: String) {
 }
 
 eachWordOnNewLine("каждое слово на новой строке")
+
+// MARK: - Task 21. Функция вывода каждого слова через определенный интервал времени
+
+func delayPrint(string str: String, seconds time: UInt32) {
+    let words = str.split(separator: " ")
+    for i in words {
+        sleep(time)
+        print(i)
+    }
+}
+
+delayPrint(string: "test1 test2 test3", seconds: 2)
