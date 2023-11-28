@@ -84,3 +84,20 @@ func search(name: String, in arr: [String]) -> String {
 
 let resultTask5 = search(name: "Bob", in: notebook)
 print(resultTask5)
+
+// MARK: - Task 6. Перестановка элементов массива
+
+let array = [1, 2, 3, 4, 5]
+
+func transposition(array: [Int]) -> [Int] {
+    var result = array
+    
+    let temp = result.last
+    guard let temp else { return [] }
+    result[result.count - 1] = result[0]
+    result[0] = temp
+    return result
+}
+
+let resultTask6 = transposition(array: array)
+print(resultTask6)
