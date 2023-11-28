@@ -307,3 +307,39 @@ func guessNumber(_ randomNumber: inout Int ) {
 }
 
 guessNumber(&randomNumber)
+
+// MARK: - Task 19. Простой шифратор и дешифратор слов
+
+func encode(_ text: String) -> String {
+    let characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
+    var encodeText = ""
+        
+    for char in text {
+        let indexSymbolBeforeEncoding = characters.firstIndex(of: String(char))
+        guard let indexSymbolBeforeEncoding else { return "" }
+        let indexSymbolAfterEncoding = characters.count - 1 - indexSymbolBeforeEncoding
+        encodeText.append(characters[indexSymbolAfterEncoding])
+    }
+    
+    return encodeText
+}
+
+print(encode("abc"))
+
+func decode(_ text: String) -> String {
+    let characters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    
+    var decodeText = ""
+    
+    for char in text {
+        let indexSymbolBeforeEncoding = characters.firstIndex(of: String(char))
+        guard let indexSymbolBeforeEncoding else { return "" }
+        let indexSymbolAfterEncoding = characters.count + 1 - indexSymbolBeforeEncoding
+        decodeText.append(characters[indexSymbolAfterEncoding])
+    }
+    
+    return decodeText
+}
+
+print(encode("zyx"))
