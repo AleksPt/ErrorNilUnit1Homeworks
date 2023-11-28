@@ -257,3 +257,20 @@ let arr2 = [4, 4, 4, 5, 6]
 
 let resultTask16 = mergingArraysWithoutDuplicates(array1: arr1, array2: arr2)
 print(resultTask16)
+
+// MARK: - Task 17. Количество слов заданной длины
+
+func numberOfWords(string str: String, number num: Int) -> Int {
+    var result = Int()
+    
+    for i in str.split(separator: " ") {
+        if i.count == num {
+            result += 1
+        }
+    }
+    
+    return result
+}
+
+let resultTask17 = numberOfWords(string: "Количество слов слов слов заданной длины", number: 4)
+print(resultTask17)
