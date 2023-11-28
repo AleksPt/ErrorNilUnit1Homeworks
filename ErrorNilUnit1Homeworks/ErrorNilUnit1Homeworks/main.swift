@@ -113,8 +113,8 @@ func formattingString(_ str: String) -> String {
     
     return result.joined(separator: " ")
     
-//     вариант 2:
-//     str.split(separator: " ").map { $0.capitalized }.joined(separator: " ")
+    //     вариант 2:
+    //     str.split(separator: " ").map { $0.capitalized }.joined(separator: " ")
 }
 
 let resultTask7 = formattingString("съешь еще этих мягких французских булок да выпей чаю")
@@ -144,3 +144,12 @@ func convertDayOfWeek(day: String) -> Int {
 
 let resultTask8 = convertDayOfWeek(day: "суббота")
 print(resultTask8)
+
+// MARK: - Task 9. Задание: Уникальные символы
+
+func uniqueSymbols(string str: String) -> Bool {
+    Set(str).count == str.count
+}
+
+let resultTask9 = uniqueSymbols(string: "swift")
+print(resultTask9)
