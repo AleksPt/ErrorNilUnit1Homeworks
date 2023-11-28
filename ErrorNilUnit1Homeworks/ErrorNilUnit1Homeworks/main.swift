@@ -145,7 +145,7 @@ func convertDayOfWeek(day: String) -> Int {
 let resultTask8 = convertDayOfWeek(day: "суббота")
 print(resultTask8)
 
-// MARK: - Task 9. Задание: Уникальные символы
+// MARK: - Task 9. Уникальные символы
 
 func uniqueSymbols(string str: String) -> Bool {
     Set(str).count == str.count
@@ -153,3 +153,15 @@ func uniqueSymbols(string str: String) -> Bool {
 
 let resultTask9 = uniqueSymbols(string: "swift")
 print(resultTask9)
+
+// MARK: - Task 10. Слияние массивов
+
+let array1 = [1, 2, 3]
+let array2 = [4, 5, 6]
+
+func mergeArray(array1: [Int], array2: [Int]) -> [Int] {
+    array1 + array2
+}
+
+let resultTask10 = mergeArray(array1: array1, array2: array2)
+print(resultTask10)
