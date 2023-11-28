@@ -37,3 +37,20 @@ func checkPalindrome(string str: String) -> Bool {
 
 let resultTask2 = checkPalindrome(string: "шалаш")
 print(resultTask2)
+
+// MARK: - Task 3. Сумма элементов массива
+
+let arrayItems = [1, 1, 1, 1, 1]
+
+func sumOfArrayElements(array arr: [Int]) -> Int {
+    var sum = 0
+    
+    for i in arr {
+        sum += i
+    }
+    
+    return sum
+}
+
+let resultTask3 = sumOfArrayElements(array: arrayItems)
+print(resultTask3)
