@@ -24,3 +24,16 @@ func sortingNumbers(array: [Int]) -> [Int] {
 
 let resultTask1 = sortingNumbers(array: arrayOfNumbers)
 print(resultTask1)
+
+// MARK: - Task 2. Проверка палиндрома
+
+func checkPalindrome(string str: String) -> Bool {
+    if str == String(str.reversed()) {
+        return true
+    } else {
+        return false
+    }
+}
+
+let resultTask2 = checkPalindrome(string: "шалаш")
+print(resultTask2)
