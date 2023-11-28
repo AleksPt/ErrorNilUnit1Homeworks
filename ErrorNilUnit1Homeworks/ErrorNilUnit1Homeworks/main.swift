@@ -246,4 +246,14 @@ func shortString(string str: String, number num: Int) -> String {
 let resultTask15 = shortString(string: "Сокращение", number: 6)
 print(resultTask15)
 
+// MARK: - Task 16. Объединение двух массивов без дубликатов
 
+func mergingArraysWithoutDuplicates(array1: [Int], array2: [Int]) -> [Int] {
+    Array(Set(array1 + array2)).sorted()
+}
+
+let arr1 = [1, 2, 3, 3, 3]
+let arr2 = [4, 4, 4, 5, 6]
+
+let resultTask16 = mergingArraysWithoutDuplicates(array1: arr1, array2: arr2)
+print(resultTask16)
