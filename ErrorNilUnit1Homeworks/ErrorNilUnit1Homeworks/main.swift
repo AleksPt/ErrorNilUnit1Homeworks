@@ -236,3 +236,14 @@ func longWordInString(string str: String) -> String {
 
 let resultTask14 = longWordInString(string: "самое длинное слово в предоставленной строке")
 print(resultTask14)
+
+// MARK: - Task 15. Сокращение строки
+
+func shortString(string str: String, number num: Int) -> String {
+    num > 0 ? String(str.dropLast(num)) + "..." : str
+}
+
+let resultTask15 = shortString(string: "Сокращение", number: 6)
+print(resultTask15)
+
+
