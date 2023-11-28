@@ -54,3 +54,12 @@ func sumOfArrayElements(array arr: [Int]) -> Int {
 
 let resultTask3 = sumOfArrayElements(array: arrayItems)
 print(resultTask3)
+
+// MARK: - Task 4. Конвертация температуры
+
+func convertTemperature(celsius: Float) -> Float {
+    (celsius * 9.0/5.0) + 32.0
+}
+
+let resultTask4 = convertTemperature(celsius: 36.6)
+print(resultTask4)
