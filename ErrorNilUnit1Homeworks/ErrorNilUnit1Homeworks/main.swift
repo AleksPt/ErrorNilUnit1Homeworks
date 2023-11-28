@@ -218,3 +218,21 @@ func sumOfAllNumbers(number n: Int) -> Int {
 
 let resultTask13 = sumOfAllNumbers(number: 3)
 print(resultTask13)
+
+// MARK: - Task 14. Длинное слово в строке
+
+func longWordInString(string str: String) -> String {
+    let words = str.split(separator: " ")
+    var result = String()
+    
+    for i in words {
+        if i.count > result.count {
+            result = String(i)
+        }
+    }
+    
+    return result
+}
+
+let resultTask14 = longWordInString(string: "самое длинное слово в предоставленной строке")
+print(resultTask14)
