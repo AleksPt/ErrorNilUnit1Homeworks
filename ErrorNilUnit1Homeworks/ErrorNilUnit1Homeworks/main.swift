@@ -28,11 +28,7 @@ print(resultTask1)
 // MARK: - Task 2. Проверка палиндрома
 
 func checkPalindrome(string str: String) -> Bool {
-    if str == String(str.reversed()) {
-        return true
-    } else {
-        return false
-    }
+    str.lowercased() == String(str.reversed()).lowercased()
 }
 
 let resultTask2 = checkPalindrome(string: "шалаш")
