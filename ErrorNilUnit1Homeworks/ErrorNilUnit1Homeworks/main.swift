@@ -245,3 +245,9 @@ func findCommonFriends(_ user1: String, _ user2: String) -> Set<String>? {
     print("Общие друзья \(user1) и \(user2): \(result)")
     return result
 }
+
+// MARK: - 7 задание. Найти уникальные элементы в массиве
+
+func uniqueElements(_ arr: [Int]) -> [Int] {
+    Array(Set(arr))
+}
