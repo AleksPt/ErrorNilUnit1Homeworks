@@ -322,3 +322,37 @@ for _ in 1...10 {
         questionsAsked.insert(question.0)
     }
 }
+
+// MARK: - 10 задание. Функция склонения слова "монета" в зависимости от числа
+
+let cases = [
+    1: "монета",
+    2: "монеты",
+    3: "монеты",
+    4: "монеты"
+]
+
+func coinCase(for num: Int) -> String {
+    var result = "\(num) "
+    
+    let lastDigit = Int(Double(num).truncatingRemainder(dividingBy: 10))
+    let lastTwoDigits = Int(Double(num).truncatingRemainder(dividingBy: 100))
+    
+    switch lastTwoDigits {
+    case 11,12,13,14:
+        result.append("монет")
+        return result
+    default:
+        break
+    }
+    
+        for i in cases {
+            if lastDigit == i.key {
+                result.append(i.value)
+                return result
+            }
+        }
+    
+    result.append("монет")
+    return result
+}
