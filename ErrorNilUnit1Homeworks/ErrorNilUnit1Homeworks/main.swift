@@ -3,9 +3,10 @@ import Foundation
 // MARK: - 1 задание
 
 var eventStorage = [String: [[String]]]()
-var arrayEvents = [String]()
 
 func addEvent() {
+    var arrayEvents = [String]()
+    
     func addEvent(date: String, event: String) {
         arrayEvents.append(event)
         eventStorage[date] = [arrayEvents]
@@ -19,7 +20,7 @@ func addEvent() {
     print("Введите мероприятие:")
     let userEvent = readLine()
     guard let userEvent = userEvent else { return }
-    guard !userDate.isEmpty else { print("Вы ничего не ввели"); return }
+    guard !userEvent.isEmpty else { print("Вы ничего не ввели"); return }
     
     addEvent(date: userDate, event: userEvent)
 }
@@ -31,7 +32,7 @@ func showEvent() {
     
     print("Введите дату:")
     let userDate = readLine()
-    guard let userDate else { return }
+    guard let userDate = userDate else { return }
     guard !userDate.isEmpty else { print("Вы ничего не ввели"); return }
     print("Ваши мероприятия в эту дату:")
     
