@@ -251,3 +251,19 @@ func findCommonFriends(_ user1: String, _ user2: String) -> Set<String>? {
 func uniqueElements(_ arr: [Int]) -> [Int] {
     Array(Set(arr))
 }
+
+// MARK: - 8 задание. Реализация простого телефонного справочника
+
+var phoneBook = [String: Int]()
+
+func addNumber(name: String, number: Int) {
+    phoneBook[name] = number
+}
+
+func removeNumber(name: String) {
+    phoneBook.removeValue(forKey: name)
+}
+
+func removeNumber(name: String) -> Int? {
+    phoneBook[name]
+}
