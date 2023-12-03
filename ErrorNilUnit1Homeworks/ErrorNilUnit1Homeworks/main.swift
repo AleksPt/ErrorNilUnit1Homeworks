@@ -378,3 +378,20 @@ func findTwoSum(nums: [Int], target: Int) -> (Int, Int) {
 }
 
 print(findTwoSum(nums: nums, target: target))
+
+// MARK: - 13 задание. Первый уникальный символ в строке
+
+func firstUniqueCharacterIndex(in str: String) -> Int {
+    for (index, char) in str.enumerated() {
+        if str.firstIndex(of: char) == str.lastIndex(of: char) {
+            return index
+        }
+    }
+    return -1
+}
+
+print("""
+    \(firstUniqueCharacterIndex(in: "000001"))
+    \(firstUniqueCharacterIndex(in: "Hello"))
+    \(firstUniqueCharacterIndex(in: "aaaa"))
+    """)
