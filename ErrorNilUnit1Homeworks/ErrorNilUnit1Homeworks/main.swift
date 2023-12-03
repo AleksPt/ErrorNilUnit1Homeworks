@@ -83,3 +83,49 @@ func displayAllSettings() {
         print("Ключ: \(i.key), значение: \(i.value)")
     }
 }
+
+// MARK: - 3 задание. Простой англо-русский переводчик
+
+let dictEngRus = [
+    "red": "красный",
+    "green": "зеленый",
+    "white": "белый",
+    "black": "черный"
+]
+
+func translate() {
+    func translate(word: String) ->String? {
+        dictEngRus[word]
+    }
+    
+    print("Введите слово на английском языке:")
+    let userAnswer = readLine()
+    
+    guard let userAnswer else { return }
+    guard !userAnswer.isEmpty else { print("Вы ничего не ввели"); return }
+    
+    print("Перевод на русский: \(translate(word: userAnswer) ?? "Упс! Такого слова в базе еще нет")")
+}
+
+func translateApp() {
+    
+    print("""
+        Выберите действие (введите число):
+        1 - Перевести слово.
+        2 - Выйти из приложения
+        """)
+    
+    let userAnswer = readLine()
+    
+    switch userAnswer {
+    case "1":
+        translate()
+        print("")
+        translateApp()
+    case "2":
+        print("Работа приложения завершена")
+    default:
+        print("Ошибка ввода, попробуйте еще раз\n")
+        translate()
+    }
+}
