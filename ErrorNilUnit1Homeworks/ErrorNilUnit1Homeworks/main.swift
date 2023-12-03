@@ -65,3 +65,21 @@ func calendar() {
             calendar()
         }
 }
+
+// MARK: - 2 задание. Хранилище настроек
+
+var settingStorage = [String: String]()
+
+func addSetting(key: String, value: String) {
+    settingStorage[key] = value
+}
+
+func extractSetting(key: String) -> String? {
+    settingStorage[key]
+}
+
+func displayAllSettings() {
+    for i in settingStorage {
+        print("Ключ: \(i.key), значение: \(i.value)")
+    }
+}
