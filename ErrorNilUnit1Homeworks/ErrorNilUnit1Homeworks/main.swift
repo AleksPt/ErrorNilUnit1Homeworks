@@ -267,3 +267,58 @@ func removeNumber(name: String) {
 func removeNumber(name: String) -> Int? {
     phoneBook[name]
 }
+
+// MARK: - 9 задание. Реализация теста по умножению
+
+var questionsAsked = Set<String>()
+
+let questionsAndAnswers = [
+    "1*1": 1,
+    "2*2": 4,
+    "3*3": 9,
+    "4*4": 16,
+    "5*5": 25,
+    "6*6": 36,
+    "7*7": 49,
+    "8*8": 56,
+    "9*9": 64,
+    "10*10": 100,
+]
+
+var correctAnswers = 0
+
+func generateUniqueMultiplicationQuestion() -> (String, Int) {
+    questionsAndAnswers.randomElement()!
+}
+
+func determineGrade(_ num: Int) -> Int {
+    var result = Int()
+    
+    switch num {
+    case 0...2: result = 2
+    case 3...5: result = 3
+    case 6...8: result = 4
+    case 9,10: result = 5
+    default: break
+    }
+    
+    print("""
+        Правильных ответов: \(correctAnswers)
+        Оценка = \(result)
+        """)
+    return result
+}
+
+for _ in 1...10 {
+    
+    let question = generateUniqueMultiplicationQuestion()
+    
+    if !questionsAsked.contains(question.0) {
+        print("Сколько будет \(question.0)?")
+        let userAnswer = readLine()
+        if userAnswer == String(question.1) {
+            correctAnswers += 1
+        }
+        questionsAsked.insert(question.0)
+    }
+}
