@@ -235,3 +235,87 @@ func costOfDrink(_ drink: DrinkType) -> Int {
 }
 
 costOfDrink(.water)
+
+// MARK: - 11 задание
+
+enum ResultRequest {
+    case success(code: Int, description: String)
+    case failure(code: Int, description: String)
+    case error(String)
+}
+
+var resultData = [Int: String]()
+let status = [
+    "Успешный запрос",
+    "Ошибка на стороне клиента",
+    "Ошибка на стороне сервера"
+]
+
+var count = 0
+
+while count < 10 {
+    let randomCode = Int.random(in: 200...526)
+    
+    switch randomCode {
+    case 200...226, 400...499, 500...526:
+        generateRequest(randomCode)
+    default: continue
+    }
+}
+
+func generateRequest(_ code: Int) {
+    if code >= 200 && code <= 226 {
+        resultData[code] = status[0]
+    } else if code >= 400 && code <= 499 {
+        resultData[code] = status[1]
+    } else if code >= 500 && code <= 526 {
+        resultData[code] = status[2]
+    }
+    
+    count += 1
+}
+
+let resultRequestData = resultData.randomElement()
+
+func fetchData() -> ResultRequest {
+    guard let requestData = resultRequestData else { return ResultRequest.error("запрос не отправлен")}
+    
+    for (key, value) in [requestData] {
+        switch key {
+        case 200...226:
+            return ResultRequest.success(code: key, description: value)
+        case 400...526:
+            return ResultRequest.failure(code: key, description: value)
+        default:
+            return ResultRequest.error("Ошибка \(resultData[key] ?? "")")
+        }
+    }
+    return .error("некоторый fallback-кейс")
+}
+
+let result = fetchData()
+
+switch result {
+case .success(let code, let description):
+    showAlert(title: "Success!", message: "\(description)\nКод статуса: \(code)")
+    print("SUCCESS!\nСтатус: \(description)\nКод статуса: \(code)")
+case .failure(let code, let description):
+    showAlert(title: "Fail!", message: "\(description)\nКод статуса: \(code)")
+    print("FAIL!\nСтатус: \(description)\nКод статуса: \(code)")
+case .error(let description):
+    showAlert(title: "Error!", message: "\(description)")
+    print("Error:\n\(description)")
+}
+
+func showAlert(title: String, message: String) {
+    let alert = UIAlertController(
+        title: title,
+        message: message,
+        preferredStyle: .alert
+    )
+    
+    let okAction = UIAlertAction(title: "Ok", style: .default)
+    
+    alert.addAction(okAction)
+    present(alert, animated: true)
+}
