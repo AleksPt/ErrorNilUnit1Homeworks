@@ -98,3 +98,29 @@ enum AnimalType {
 let insect: AnimalType = .insect
 insect.diet
 
+// MARK: - 6 Задание. Отслеживание статуса заказа в ресторане
+
+enum OrderStatus: String {
+    case received
+    case prepared = "Готовится"
+    case readyToServe = "Готов к подаче"
+    case delivered = "Доставляется"
+    
+    var nextStatus: String {
+        switch self {
+        case .received:
+            return "Следующий статус: \(OrderStatus.prepared.rawValue)"
+        case .prepared:
+            return "Следующий статус: \(OrderStatus.readyToServe.rawValue)"
+        case .readyToServe:
+            return "Следующий статус: \(OrderStatus.delivered.rawValue)"
+        case .delivered:
+            return ""
+        }
+    }
+}
+
+let statusMyOrder: OrderStatus = .readyToServe
+statusMyOrder.nextStatus
+
+
