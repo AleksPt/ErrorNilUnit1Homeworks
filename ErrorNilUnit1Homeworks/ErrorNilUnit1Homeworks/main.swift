@@ -76,3 +76,25 @@ enum CameraMode {
 let cameraMode: CameraMode = .nightly
 cameraMode.recommendation
 
+// MARK: - 5 задание. Диеты животных в зоопарке
+
+enum AnimalType {
+    case predator
+    case herbivore
+    case insect
+    
+    var diet: String {
+        switch self {
+        case .predator:
+            return "Хищники едят других животных, таких как кролики, олени, антилопы и другие более мелкие млекопитающие. Они также могут есть рыбу, птиц и насекомых."
+        case .herbivore:
+            return "Травоядные могут есть большинство видов растений, включая траву, листья деревьев, цветы, фрукты и овощи."
+        case .insect:
+            return "Насекомые едят растения, фрукты, овощи, грибы и других насекомых"
+        }
+    }
+}
+
+let insect: AnimalType = .insect
+insect.diet
+
