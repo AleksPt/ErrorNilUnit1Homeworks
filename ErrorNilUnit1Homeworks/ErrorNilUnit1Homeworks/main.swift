@@ -51,3 +51,28 @@ enum PaymentStatus {
 let statusPaid: PaymentStatus = .paid("5/12/2023")
 let statusError: PaymentStatus = .error("банкрот")
 
+// MARK: - 4 задание. Рекомендации по режимам камеры
+
+enum CameraMode {
+    case auto
+    case portrait
+    case landscape
+    case nightly
+    
+    var recommendation: String {
+        switch self {
+        case .auto:
+            return "В этом режиме фотоаппарат автоматически выбирает наиболее подходящие настройки для съемки в зависимости от условий освещения и сцены"
+        case .portrait:
+            return "В этом режиме фокус камеры фокусируется на объекте съемки, размывая задний план, чтобы создать эффект глубины"
+        case .landscape:
+            return "Этот режим предназначен для фотографирования обширных пейзажей, где требуется широкий угол обзора"
+        case .nightly:
+            return "Этот режим идеально подходит для фотографирования в условиях низкой освещенности"
+        }
+    }
+}
+
+let cameraMode: CameraMode = .nightly
+cameraMode.recommendation
+
