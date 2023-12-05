@@ -157,3 +157,42 @@ let doubleRoom: RoomType = .doubleRoom
 doubleRoom.price
 doubleRoom.numberOfAvailable
 
+// MARK: - 8 задание. Уровни сложности в игре
+
+enum DifficultyLevel {
+    case light
+    case medium
+    case heavy
+    case expert
+    
+    var enemyCount: Int {
+        switch self {
+        case .light:
+            return 50
+        case .medium:
+            return 20
+        case .heavy:
+            return 11
+        case .expert:
+            return 5
+        }
+    }
+    
+    var timeLimit: String {
+        switch self {
+        case .light:
+            return "30 minutes"
+        case .medium:
+            return "15 minutes"
+        case .heavy:
+            return "10 minutes"
+        case .expert:
+            return "5 minutes"
+        }
+    }
+}
+
+let level: DifficultyLevel = .medium
+level.enemyCount
+level.timeLimit
+
