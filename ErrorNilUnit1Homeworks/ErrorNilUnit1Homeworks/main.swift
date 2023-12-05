@@ -123,4 +123,37 @@ enum OrderStatus: String {
 let statusMyOrder: OrderStatus = .readyToServe
 statusMyOrder.nextStatus
 
+// MARK: - 7 задание. Информация о номерах в отеле
+
+enum RoomType {
+    case singleRoom
+    case doubleRoom
+    case luxuryRoom
+    
+    var price: Int {
+        switch self {
+        case .singleRoom:
+            return 100
+        case .doubleRoom:
+            return 500
+        case .luxuryRoom:
+            return 1000
+        }
+    }
+    
+    var numberOfAvailable: Int {
+        switch self {
+        case .singleRoom:
+            return 7
+        case .doubleRoom:
+            return 4
+        case .luxuryRoom:
+            return 2
+        }
+    }
+}
+
+let doubleRoom: RoomType = .doubleRoom
+doubleRoom.price
+doubleRoom.numberOfAvailable
 
