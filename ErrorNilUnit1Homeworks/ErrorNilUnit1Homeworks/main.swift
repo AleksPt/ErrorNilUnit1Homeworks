@@ -221,3 +221,17 @@ enum Cloudiness {
 let precipitation: Cloudiness = .cloudy
 precipitation.rainfallProbability
 
+// MARK: - 10 задание. Цены напитков в автомате
+
+enum DrinkType: Int {
+    case coffee = 50
+    case tea = 20
+    case hotChocolate = 30
+    case water = 10
+}
+
+func costOfDrink(_ drink: DrinkType) -> Int {
+    drink.rawValue
+}
+
+costOfDrink(.water)
