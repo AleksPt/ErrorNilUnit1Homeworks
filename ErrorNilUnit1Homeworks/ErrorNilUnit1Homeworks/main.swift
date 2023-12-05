@@ -39,4 +39,15 @@ let bicycle: Transport = .bicycle(30)
 let train: Transport = .train(400)
 let plane: Transport = .plane(1000)
 
+// MARK: - 3 задание. Статусы платежей
+
+enum PaymentStatus {
+    case unpaid
+    case inProcessing
+    case paid(String)
+    case error(String)
+}
+
+let statusPaid: PaymentStatus = .paid("5/12/2023")
+let statusError: PaymentStatus = .error("банкрот")
 
