@@ -196,3 +196,28 @@ let level: DifficultyLevel = .medium
 level.enemyCount
 level.timeLimit
 
+// MARK: - 9 задание. Прогноз погоды по облачности
+
+enum Cloudiness {
+    case clear
+    case partlyCloudy
+    case cloudy
+    case overcast
+
+    var rainfallProbability: String {
+        switch self {
+        case .clear:
+            return "5%"
+        case .partlyCloudy:
+            return "20%"
+        case .cloudy:
+            return "40%"
+        case .overcast:
+            return "70%"
+        }
+    }
+}
+
+let precipitation: Cloudiness = .cloudy
+precipitation.rainfallProbability
+
