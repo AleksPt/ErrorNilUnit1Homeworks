@@ -164,8 +164,8 @@ scania.changeCargo(is: .unload, quantity: 7500)
 print("""
     Марка: \(scania.carBrand)
     Год выпуска: \(scania.yearOfIssue)
-    Максимальная вместимость багажника: \(scania.maxTruckBody) кг
-    Багажник заполнен на: \(scania.currentVolumeTruckBody) кг
+    Максимальная вместимость кузова: \(scania.maxTruckBody) кг
+    Кузов заполнен на: \(scania.currentVolumeTruckBody) кг
     Свободно для загрузки: \(scania.maxTruckBody - scania.currentVolumeTruckBody) кг
     Статус двигателя: \(scania.engine.rawValue)
     Статус окон: \(scania.window.rawValue)
@@ -173,7 +173,7 @@ print("""
 
 var kenworth = Truck(
     carBrand: "Kenworth",
-    yearOfIssue: 2016,
+    yearOfIssue: 1996,
     maxTruckBody: 20000,
     engine: .stop,
     window: .closed
